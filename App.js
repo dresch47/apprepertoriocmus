@@ -19,6 +19,9 @@ const Navegador = TabNavigator({
   },
   TelaVotos:{
     screen:TelaVotos
+  },
+  TelaSugestoes:{
+    screen:TelaSugestoes
   }
 
 
