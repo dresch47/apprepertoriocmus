@@ -4,10 +4,10 @@ import {View, Text, StyleSheet,Image} from 'react-native';
 export default class TelaSugestoes extends Component{
 
 	static navigationOptions = ({navigation})=>({
-		tabBarLaber:'Sugestoes',
+		tabBarLabel:'Sugestoes',
 		tabBarIcon:({tintColor, focused})=>{
                       return (
-                   <Image source={require('../assets/images/logoEnviar.png')} style={{width:26, height:26}}/>
+                   <Image source={require('../assets/images/megafone.png')} style={{width:26, height:26}}/>
                 );
 		}
 	});

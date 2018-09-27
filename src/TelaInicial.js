@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {View,Text,Button,StyleSheet,Image, ImageBackground} from 'react-native';
+ 
 
 
 export default class TelaInicial extends Component{
@@ -16,24 +17,33 @@ export default class TelaInicial extends Component{
         }
 
 });
+
+    constructor(props){
+        super(props);
+        this.state = {};
+
+        this.clicar = this.clicar.bind(this);
+    }
+
+    clicar(){
+     alert('clicou no botao');
+
+    }
+
 	render(){
 
         var logo = {uri:'./assets/images/logo.jpg'};
 		return(
             
-            <ImageBackground blurRadius={0} style={styles.body} source={require('../assets/images/image6.png')} >
+            <ImageBackground blurRadius={0} style={styles.body} source={require('../assets/images/image2.png')} >
+              
+                <Image style={styles.img} source={require('../assets/images/logoTitulo.png')}/>
+                <Text style={styles.textRepert}>Concerto Popular</Text>
+                <Text style={styles.subTextRepert}>Guarapari - 19 de Dezembro de 2018</Text> 
+                <Image resizeMode="contain" style={styles.imgTbn}source={require('../assets/images/trombone.png')}/>
+                <Button title="Deixe aqui sua Sugestão" onPress={this.clicar}/>
                 
-                	  
 
-    		            <Text style={styles.textRepert} >Seja Bem Vindo ao App de Repertório do Corpo Musical da PMES</Text>
-                         <Text style={styles.textRepert}>Concerto Popular</Text>
-                         <Text style={styles.textRepert}>Navegue no Menu acima para ver o Repertório do dia e votar quais as músicas que voce prefere que sejam executadas</Text>
-
-                        <Image blurRadius={1} source={require('../assets/images/brasaoCMus.jpg')} style={styles.img} />
-    		            <Text style={styles.subTextRepert}>Guarapari - 19 de Dezembro de 2018</Text>
-    		            
-                      
-		           	
             </ImageBackground>
 	   );
 	}
@@ -50,7 +60,7 @@ const styles = StyleSheet.create({
     
       textRepert:{
         
-        fontSize:22,
+        fontSize:30,
         color:'#00009C',
         textAlign:'center',
         fontWeight:'bold',
@@ -58,26 +68,21 @@ const styles = StyleSheet.create({
         
         
     },
-      textRepert2:{
-        fontSize:22,
-        color:'#00009C',
-        textAlign:'center',
-        fontWeight:'bold',
-        fontStyle:'italic',
-      },
-
       subTextRepert:{
-        fontSize:30,
+        fontSize:20,
         color:'#00009C',
         textAlign:'center',
         fontWeight:'bold',
         
     },
     img:{
-        width:200,
+        width:400,
         height:200,
         borderRadius:25
         
+    },
+    imgTbn:{
+        height:200
     }
 
 },{

@@ -23,8 +23,9 @@ export default class TelaVotos extends Component{
 			lista:[]
 			
 		}
-               
-		firebase.database().ref('musicas').on('value', (snapshot)=>{
+
+
+		    firebase.database().ref('musicas').on('value', (snapshot)=>{
                   let state = this.state;
                   state.lista = [];
                    
@@ -57,7 +58,7 @@ export default class TelaVotos extends Component{
 	render(){
 		return(
 
-			<ImageBackground style={styles.container} source={require('../assets/images/image6.png')}>
+			<ImageBackground style={styles.container} source={require('../assets/images/image5.png')}>
 				<Text style={styles.titulo}>Mais votadas:</Text>
 				
                 <FlatList 

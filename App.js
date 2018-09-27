@@ -5,26 +5,23 @@ import { TabNavigator } from 'react-navigation'
 import TelaInicial from './src/TelaInicial';
 import TelaRepertorio from './src/TelaRepertorio';
 import TelaEnvio from './src/TelaEnvio';
-import TelaVotos from  './src/TelaVotos';
+import TelaVotos from './src/TelaVotos';
+
 
 const Navegador = TabNavigator({
   Home: {
     screen:TelaInicial
   },
-  Repertório:{
+  
+  TelaRepertorio:{
     screen:TelaRepertorio
   },
-  Envio:{
+  TelaEnvio:{
     screen:TelaEnvio
   },
   TelaVotos:{
     screen:TelaVotos
-  },
-  TelaSugestoes:{
-    screen:TelaSugestoes
   }
-
-
 }, {
   tabBarOptions:{
         showIcon:true,
